@@ -592,40 +592,58 @@ span{
 }
 
 /* Porfolio section */
-.portfolio{
+.portfolio {
     background-color: var(--second--bg-color);
 }
-.portfolio h2{
+
+.portfolio h2 {
     margin-bottom: 4rem;
 }
-.portfolio-container{
+
+.portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
-.portfolio-container .portfolio-box{
+
+.portfolio-container .portfolio-box {
     position: relative;
     height: 300px;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-}portfolio-laye
-.portfolio-box img{
+    align-items: center;
+    justify-content: center;
+
+    /* Yeh line add karein taaki image ke charo taraf space ban jaaye */
+    padding: 1.5rem;
+    box-sizing: border-box;
+    /* Yeh padding ko height/width mein include karta hai */
+}
+
+.portfolio-box img {
+    /* Width aur Height ko 100% rakhein taaki woh padded area mein fit ho */
     width: 100%;
+    height: 100%;
+
+    /* 'contain' bilkul sahi hai poori image dikhane ke liye */
+    object-fit: contain;
     transition: .5s ease;
 }
-.portfolio-box:hover img{
+
+.portfolio-box:hover img {
     transform: scale(1.1);
 }
-.portfolio-box .portfolio-layer{
+
+.portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,19 +653,23 @@ span{
     transform: translateY(100%);
     transition: .5s ease;
 }
-.portfolio-box:hover .portfolio-layer{
-transform: translateY(0);
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
 }
-.portfolio-layer h4{
+
+.portfolio-layer h4 {
     font-size: 3rem;
-    color:rgb(255, 255, 255) ;
+    color: rgb(255, 255, 255);
 }
-.portfolio-layer p{
+
+.portfolio-layer p {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
     color: rgb(255, 255, 255);
 }
-.portfolio-layer a{
+
+.portfolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -656,7 +678,8 @@ transform: translateY(0);
     background: var(--text-color);
     border-radius: 50%;
 }
-.portfolio-layer a i{
+
+.portfolio-layer a i {
     font-size: 2rem;
     color: var(--second--bg-color);
 }
